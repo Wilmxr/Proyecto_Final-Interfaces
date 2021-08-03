@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./img/web-icon.svg">
+        <link rel="stylesheet" href="./css/lightslider.css">
+        <script src="./js/JQuery3.3.1.js"></script>
+        <script src="./js/lightslider.js"></script>  
+        <title>Movplus</title>
+    </head>
+
+    <body>
+        <!--navigation-->
+        <nav>
+            <a href="/" class="logo">
+                <img src="./img/web-icon.svg" alt="">
+            </a>
+
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Favoritos</a></li>
+            </ul>
+        </nav>
+
+        <!--Section: Popular Movies-->
+            <section id="popular">   
+                <div class="popular">
+                    <h2 class="popular-title">Películas Populares</h2>
+                    
+                    <ul id="autoWidth" class="cS-hidden">
+                        
+                    </ul>
+                    
+                </div>
+            </section>
+        
+        <!--Scripts-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#autoWidth').lightSlider({
+                    autoWidth: true,
+                    onSliderLoad: function() {
+                        $('#autoWidth').removeClass('cS-hidden');
+                    }
+                });
+            });
+        </script>
+        
+        <script src="./js/api.js"></script>
+    </body>
+</html>
